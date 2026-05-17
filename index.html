@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Portfolio R Raka Pratama Putra M</title>
+
+  <link rel="icon" type="image/jpeg" href="./portofolio.jpeg" />
+  <link rel="apple-touch-icon" href="./portofolio.jpeg" />
+
+  <meta name="description" content="Portfolio R Raka Pratama Putra M - Retail Operations, Partnership, Activation, AI Dashboard, and Business Collaboration." />
+  <meta name="theme-color" content="#08111f" />
+
+  <meta property="og:title" content="Portfolio R Raka Pratama Putra M" />
+  <meta property="og:description" content="Retail Operations, Partnership, Activation, AI Dashboard, and Business Collaboration Portfolio." />
+  <meta property="og:image" content="./portofolio.jpeg" />
+  <meta property="og:type" content="website" />
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html,
+    body {
+      width: 100%;
+      height: 100%;
+      overflow: hidden;
+      background: #08111f;
+      font-family: Arial, sans-serif;
+    }
+
+    iframe {
+      width: 100%;
+      height: 100vh;
+      border: none;
+      display: block;
+      background: #08111f;
+    }
+
+    .loading {
+      position: fixed;
+      inset: 0;
+      background: radial-gradient(circle at top right, #163d74 0%, #08111f 45%, #02060d 100%);
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      gap: 16px;
+      z-index: 10;
+      transition: opacity 0.4s ease;
+    }
+
+    .loading img {
+      width: 86px;
+      height: 86px;
+      border-radius: 50%;
+      object-fit: cover;
+      border: 3px solid #1ea7ff;
+      box-shadow: 0 0 30px rgba(30,167,255,0.45);
+    }
+
+    .loading h1 {
+      font-size: 22px;
+      color: #1ea7ff;
+    }
+
+    .loading p {
+      font-size: 14px;
+      color: #cfe8ff;
+    }
+
+    .loading.hide {
+      opacity: 0;
+      pointer-events: none;
+    }
+  </style>
+</head>
+
+<body>
+
+  <div class="loading" id="loading">
+    <img src="./portofolio.jpeg" alt="Portfolio R Raka Pratama Putra M" />
+    <h1>Portfolio R Raka Pratama Putra M</h1>
+    <p>Loading portfolio...</p>
+  </div>
+
+  <iframe
+    src="https://script.google.com/macros/s/AKfycbx5rCNLkiZH1-CbmicSj_Qf9JVAjYLF9LF1BKingdi9CVbsu8Sia_AgWfqC5ZiZZhVF/exec"
+    title="Portfolio R Raka Pratama Putra M"
+    onload="document.getElementById('loading').classList.add('hide')">
+  </iframe>
+
+</body>
+</html>
