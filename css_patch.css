@@ -1,0 +1,41 @@
+/* ============================================
+   PORTFOLIO BUGFIX CSS PATCH
+   Tambahkan ini di dalam <style> pada index.html
+   ============================================ */
+
+/* FIX 1: Image height saat non-admin mode (upload-area-bottom hidden) */
+body:not(.admin-mode) .upload-box img[data-upload-preview] {
+  height: 100% !important;
+  top: 0 !important;
+  position: absolute !important;
+}
+
+/* FIX 2: Upload box sizing saat has-image di non-admin mode */
+body:not(.admin-mode) .upload-box.has-image {
+  padding-bottom: 0 !important;
+}
+
+/* FIX 3: Pastikan gambar yang berhasil load selalu visible */
+.upload-box img[data-upload-preview][src]:not([src=""]) {
+  display: block !important;
+  visibility: visible !important;
+  opacity: 1 !important;
+}
+
+/* FIX 4: Product intelligence images - pastikan box tidak collapse */
+#product-intelligence .upload-box.is-empty {
+  min-height: 320px;
+  background: radial-gradient(circle at top right, rgba(30,167,255,.12), transparent 38%),
+              linear-gradient(145deg, #07111f, #050b14);
+}
+
+/* FIX 5: Nav z-index — pastikan klik tidak ke-block */
+.navbar {
+  z-index: 1000 !important;
+}
+.menu a {
+  pointer-events: auto !important;
+  cursor: pointer !important;
+  position: relative;
+  z-index: 1001;
+}
